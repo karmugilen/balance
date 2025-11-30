@@ -22,7 +22,7 @@ from ilwt_main import (
 )
 
 
-def load_image(path, size=224):
+def load_image(path, size=256):
     """Load and preprocess image"""
     transform = transforms.Compose([
         transforms.Resize((size, size)),

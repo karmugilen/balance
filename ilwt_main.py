@@ -18,6 +18,7 @@ import shutil
 import json
 
 
+
 # Differentiable 1D/2D ILWT (LeGall 5/3) utilities
 def _reflect_pad_lastdim_1(x: torch.Tensor):
     """
@@ -1220,7 +1221,8 @@ def train_model(model, train_dataset, val_dataset, num_epochs=150, save_metrics=
         epoch_train_loss = 0.0
 
         # Training loop
-        for batch_idx, (input_tensor, host_tensor, secret_tensor) in enumerate(train_dataloader):
+        loop = tqdm(train_dataloader, desc=f"Epoch {epoch + 1}/{num_epochs}")
+        for batch_idx, (input_tensor, host_tensor, secret_tensor) in enumerate(loop):
             # Non-blocking GPU transfer for faster data loading
             input_tensor = input_tensor.to(device, non_blocking=True)
             host_tensor = host_tensor.to(device, non_blocking=True)
@@ -1271,6 +1273,9 @@ def train_model(model, train_dataset, val_dataset, num_epochs=150, save_metrics=
                         print(f"    [Batch 0 Gradients] log_wLL: {wLL_grad:.7f}, log_kY: {kY_grad:.7f}, log_kC: {kC_grad:.7f}")
 
             epoch_train_loss += loss.item()
+            
+            # Update progress bar
+            loop.set_postfix(loss=loss.item())
 
         # Calculate average training metrics
         avg_train_loss = epoch_train_loss / len(train_dataloader) if len(train_dataloader) > 0 else 0
@@ -1726,10 +1731,10 @@ def main():
     print("=" * 50)
 
     image_dir = "my_images"
-    img_size = 224
+    img_size = 256
     num_blocks = 8  # Increased from 6 for better capacity
     hidden_channels = 128  # Increased from 96 for wider network
-    num_epochs = 10  # Quick test with all features
+    num_epochs = 100  # Quick test with all features
     num_test_samples = 5  # Reduced for research testing
 
     # Load full dataset

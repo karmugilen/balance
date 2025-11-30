@@ -277,6 +277,50 @@ class ActNorm(nn.Module):
         return x
 
 
+# Unbounded Learnable Subband Weights
+class LearnableSubbandWeights(nn.Module):
+    """
+    Unbounded learnable wavelet subband weights with full freedom.
+    Uses exponential transform for natural positive scaling.
+    """
+    def __init__(self, init_wLL=0.35, init_wLH=0.14, init_wHL=0.14, init_wHH=0.06, init_wLL2=0.20):
+        super(LearnableSubbandWeights, self).__init__()
+        # Initialize in log space so exp(log_w) = w
+        self.log_wLL = nn.Parameter(torch.log(torch.tensor(init_wLL)))
+        self.log_wLH = nn.Parameter(torch.log(torch.tensor(init_wLH)))
+        self.log_wHL = nn.Parameter(torch.log(torch.tensor(init_wHL)))
+        self.log_wHH = nn.Parameter(torch.log(torch.tensor(init_wHH)))
+        self.log_wLL2 = nn.Parameter(torch.log(torch.tensor(init_wLL2)))
+    
+    def get_weights(self):
+        # exp ensures positivity and preserves scale exactly at init
+        wLL = torch.exp(self.log_wLL)
+        wLH = torch.exp(self.log_wLH)
+        wHL = torch.exp(self.log_wHL)
+        wHH = torch.exp(self.log_wHH)
+        wLL2 = torch.exp(self.log_wLL2)
+        return torch.stack([wLL, wLH, wHL, wHH]), wLL2
+
+
+# Unbounded Learnable YCbCr Scaling
+class LearnableYCbCrScaling(nn.Module):
+    """
+    Unbounded learnable YCbCr scaling with full freedom.
+    Uses exponential transform for natural positive scaling.
+    """
+    def __init__(self, init_kY=0.02, init_kC=0.06):
+        super(LearnableYCbCrScaling, self).__init__()
+        # Initialize in log space so exp(log_k) = k
+        self.log_kY = nn.Parameter(torch.log(torch.tensor(init_kY)))
+        self.log_kC = nn.Parameter(torch.log(torch.tensor(init_kC)))
+    
+    def get_scales(self):
+        # exp ensures positivity and preserves scale exactly at init
+        kY = torch.exp(self.log_kY)
+        kC = torch.exp(self.log_kC)
+        return kY, kC
+
+
 # Affine coupling layer
 class AffineCouplingLayer(nn.Module):
     def __init__(self, channels, hidden_channels=64, cond_channels=0):
@@ -399,8 +443,9 @@ class StarINNWithILWT(nn.Module):
         kC=0.04,
     ):
         super(StarINNWithILWT, self).__init__()
-        self.kY = kY
-        self.kC = kC
+        # Initialize learnable parameters
+        self.subband_weights = LearnableSubbandWeights()
+        self.ycbcr_scaling = LearnableYCbCrScaling(init_kY=kY, init_kC=kC)
 
         if transform_type == "haar_conv":
             self.ilwt = LearnableILWTWithHaar(channels)
@@ -448,15 +493,10 @@ class StarINNWithILWT(nn.Module):
         cover_ycc = rgb_to_ycbcr(cover)
         resid_ycc = rgb_to_ycbcr(residual_spatial[:, :3, :, :])
 
-        # kY, kC = 0.01, 0.04
-        scale = torch.cat(
-            [
-                torch.full_like(cover_ycc[:, 0:1], self.kY),
-                torch.full_like(cover_ycc[:, 1:2], self.kC),
-                torch.full_like(cover_ycc[:, 2:3], self.kC),
-            ],
-            dim=1,
-        )
+        # Get LEARNABLE YCbCr scaling parameters
+        kY, kC = self.ycbcr_scaling.get_scales()
+        # Use broadcasting for scale tensor (1, 3, 1, 1) - preserves gradients!
+        scale = torch.stack([kY, kC, kC]).view(1, 3, 1, 1).to(cover.device)
         stego_ycc = cover_ycc + torch.tanh(resid_ycc) * scale
         stego_rgb = ycbcr_to_rgb(stego_ycc)
         stego_spatial = x.clone()
@@ -484,15 +524,10 @@ class StarINNWithILWT(nn.Module):
         z_ycc = rgb_to_ycbcr(z[:, :3, :, :])
         resid_ycc = rgb_to_ycbcr(residual_spatial[:, :3, :, :])
 
-        # kY, kC = 0.01, 0.04
-        scale = torch.cat(
-            [
-                torch.full_like(z_ycc[:, 0:1], self.kY),
-                torch.full_like(z_ycc[:, 1:2], self.kC),
-                torch.full_like(z_ycc[:, 2:3], self.kC),
-            ],
-            dim=1,
-        )
+        # Get LEARNABLE YCbCr scaling parameters (same as forward)
+        kY, kC = self.ycbcr_scaling.get_scales()
+        # Use broadcasting for scale tensor (1, 3, 1, 1) - preserves gradients!
+        scale = torch.stack([kY, kC, kC]).view(1, 3, 1, 1).to(z.device)
         host_ycc = z_ycc - torch.tanh(resid_ycc) * scale
         host_rgb = ycbcr_to_rgb(host_ycc)
         x_spatial = z.clone()
@@ -525,9 +560,9 @@ def main():
     parser.add_argument("--model", required=True, help="Path to trained .pth file")
     parser.add_argument("--stego", required=True, help="Path to stego image (PNG/JPG)")
     parser.add_argument("--output", required=True, help="Output recovered secret image path (PNG)")
-    parser.add_argument("--size", type=int, default=224, help="Square size for preprocessing (default: 224)")
-    parser.add_argument("--num_blocks", type=int, default=6, help="Number of StarINN blocks (must match training)")
-    parser.add_argument("--hidden_channels", type=int, default=96, help="Hidden channels in coupling nets (match training)")
+    parser.add_argument("--size", type=int, default=256, help="Square size for preprocessing (default: 256)")
+    parser.add_argument("--num_blocks", type=int, default=8, help="Number of StarINN blocks (must match training)")
+    parser.add_argument("--hidden_channels", type=int, default=128, help="Hidden channels in coupling nets (match training)")
     parser.add_argument("--transform_type", type=str, default="ilwt53", choices=["ilwt53", "haar_conv"], help="Transform backend used in training")
     parser.add_argument("--kY", type=float, default=0.01, help="Y channel scaling factor (default: 0.01)")
     parser.add_argument("--kC", type=float, default=0.04, help="Cb/Cr channel scaling factor (default: 0.04)")
@@ -545,8 +580,14 @@ def main():
         kY=args.kY,
         kC=args.kC
     )
-    state = torch.load(args.model, map_location=device)
-    model.load_state_dict(state)
+    # Load model (handle both checkpoint and state_dict)
+    state = torch.load(args.model, map_location=device, weights_only=False)
+    if isinstance(state, dict) and 'model_state_dict' in state:
+        print(f"Loading from checkpoint (Epoch {state.get('epoch', 'unknown')})")
+        model.load_state_dict(state['model_state_dict'])
+    else:
+        print("Loading from state dict")
+        model.load_state_dict(state)
     model = model.to(device)
     model.eval()
 

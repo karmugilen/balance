@@ -1,24 +1,204 @@
 ILWT Steganography Training Log
 ==================================================
-Started at: 2025-11-30 22:09:04.094612
+Started at: 2025-11-30 22:53:25.195127
 
-Epoch 1/10, Train Loss: 353.371416, Hiding PSNR: 28.38, Recovery PSNR: 11.72, Rec SSIM: 0.2575, ACC: 0.5655, BPP: 24.00, w_hid: 0.0413, w_rec: 0.9586
-  Val Loss: 224.781960, Val Hid PSNR: 28.61, Val Rec PSNR: 12.95, Val Rec SSIM: 0.3356, Val ACC: 0.5829
-Epoch 2/10, Train Loss: 133.787572, Hiding PSNR: 23.12, Recovery PSNR: 18.78, Rec SSIM: 0.4922, ACC: 0.5536, BPP: 24.00, w_hid: 0.1201, w_rec: 0.8799
-  Val Loss: 91.568782, Val Hid PSNR: 22.96, Val Rec PSNR: 16.09, Val Rec SSIM: 0.3470, Val ACC: 0.5971
-Epoch 3/10, Train Loss: 72.961372, Hiding PSNR: 21.09, Recovery PSNR: 17.63, Rec SSIM: 0.4262, ACC: 0.6591, BPP: 24.00, w_hid: 0.3353, w_rec: 0.6647
-  Val Loss: 49.410151, Val Hid PSNR: 21.47, Val Rec PSNR: 18.74, Val Rec SSIM: 0.4255, Val ACC: 0.6408
-Epoch 4/10, Train Loss: 77.687552, Hiding PSNR: 22.11, Recovery PSNR: 18.28, Rec SSIM: 0.6275, ACC: 0.6471, BPP: 24.00, w_hid: 0.2714, w_rec: 0.7286
-  Val Loss: 55.279408, Val Hid PSNR: 21.71, Val Rec PSNR: 18.16, Val Rec SSIM: 0.4052, Val ACC: 0.6197
-Epoch 5/10, Train Loss: 56.875884, Hiding PSNR: 22.26, Recovery PSNR: 20.93, Rec SSIM: 0.5617, ACC: 0.6448, BPP: 24.00, w_hid: 0.2942, w_rec: 0.7058
-  Val Loss: 47.161148, Val Hid PSNR: 22.53, Val Rec PSNR: 18.79, Val Rec SSIM: 0.4336, Val ACC: 0.6379
-Epoch 6/10, Train Loss: 43.556408, Hiding PSNR: 22.57, Recovery PSNR: 16.75, Rec SSIM: 0.5009, ACC: 0.6530, BPP: 24.00, w_hid: 0.3346, w_rec: 0.6654
-  Val Loss: 45.327906, Val Hid PSNR: 22.92, Val Rec PSNR: 19.16, Val Rec SSIM: 0.4808, Val ACC: 0.6349
-Epoch 7/10, Train Loss: 51.308926, Hiding PSNR: 23.55, Recovery PSNR: 19.52, Rec SSIM: 0.3930, ACC: 0.6318, BPP: 24.00, w_hid: 0.3782, w_rec: 0.6218
-  Val Loss: 38.147284, Val Hid PSNR: 22.88, Val Rec PSNR: 20.17, Val Rec SSIM: 0.5186, Val ACC: 0.6791
-Epoch 8/10, Train Loss: 42.413674, Hiding PSNR: 22.17, Recovery PSNR: 19.21, Rec SSIM: 0.5527, ACC: 0.5950, BPP: 24.00, w_hid: 0.2594, w_rec: 0.7406
-  Val Loss: 43.516241, Val Hid PSNR: 22.83, Val Rec PSNR: 19.93, Val Rec SSIM: 0.4807, Val ACC: 0.6456
-Epoch 9/10, Train Loss: 38.082460, Hiding PSNR: 23.47, Recovery PSNR: 21.69, Rec SSIM: 0.5728, ACC: 0.6685, BPP: 24.00, w_hid: 0.1634, w_rec: 0.8366
-  Val Loss: 38.184809, Val Hid PSNR: 23.21, Val Rec PSNR: 20.04, Val Rec SSIM: 0.4677, Val ACC: 0.6532
-Epoch 10/10, Train Loss: 39.001335, Hiding PSNR: 21.66, Recovery PSNR: 18.32, Rec SSIM: 0.4333, ACC: 0.6007, BPP: 24.00, w_hid: 0.4282, w_rec: 0.5718
-  Val Loss: 37.313159, Val Hid PSNR: 23.14, Val Rec PSNR: 20.29, Val Rec SSIM: 0.5130, Val ACC: 0.6565
+Epoch 1/100, Train Loss: 302.029358, Hiding PSNR: 26.98, Recovery PSNR: 12.05, Rec SSIM: 0.2751, ACC: 0.6065, BPP: 24.00, w_hid: 0.0200, w_rec: 0.9800
+  Val Loss: 186.795344, Val Hid PSNR: 27.78, Val Rec PSNR: 13.87, Val Rec SSIM: 0.2710, Val ACC: 0.5671
+Epoch 2/100, Train Loss: 126.275110, Hiding PSNR: 23.04, Recovery PSNR: 18.40, Rec SSIM: 0.4097, ACC: 0.6513, BPP: 24.00, w_hid: 0.2801, w_rec: 0.7199
+  Val Loss: 82.053191, Val Hid PSNR: 23.17, Val Rec PSNR: 16.72, Val Rec SSIM: 0.4106, Val ACC: 0.6319
+Epoch 3/100, Train Loss: 75.270231, Hiding PSNR: 23.04, Recovery PSNR: 16.75, Rec SSIM: 0.4523, ACC: 0.6398, BPP: 24.00, w_hid: 0.2799, w_rec: 0.7201
+  Val Loss: 71.587777, Val Hid PSNR: 22.29, Val Rec PSNR: 17.64, Val Rec SSIM: 0.4411, Val ACC: 0.6118
+Epoch 4/100, Train Loss: 55.808433, Hiding PSNR: 22.50, Recovery PSNR: 21.18, Rec SSIM: 0.5511, ACC: 0.6823, BPP: 24.00, w_hid: 0.3088, w_rec: 0.6912
+  Val Loss: 41.565432, Val Hid PSNR: 22.58, Val Rec PSNR: 19.36, Val Rec SSIM: 0.5429, Val ACC: 0.6665
+Epoch 5/100, Train Loss: 41.884017, Hiding PSNR: 24.56, Recovery PSNR: 22.30, Rec SSIM: 0.6184, ACC: 0.6307, BPP: 24.00, w_hid: 0.1652, w_rec: 0.8348
+  Val Loss: 34.421929, Val Hid PSNR: 23.55, Val Rec PSNR: 20.39, Val Rec SSIM: 0.5378, Val ACC: 0.6786
+Epoch 6/100, Train Loss: 37.945191, Hiding PSNR: 23.80, Recovery PSNR: 23.78, Rec SSIM: 0.6889, ACC: 0.7363, BPP: 24.00, w_hid: 0.2949, w_rec: 0.7051
+  Val Loss: 30.819023, Val Hid PSNR: 23.41, Val Rec PSNR: 20.98, Val Rec SSIM: 0.5467, Val ACC: 0.6626
+Epoch 7/100, Train Loss: 27.162958, Hiding PSNR: 25.60, Recovery PSNR: 23.30, Rec SSIM: 0.5048, ACC: 0.6441, BPP: 24.00, w_hid: 0.4054, w_rec: 0.5946
+  Val Loss: 54.705346, Val Hid PSNR: 24.53, Val Rec PSNR: 19.72, Val Rec SSIM: 0.4487, Val ACC: 0.6122
+Epoch 8/100, Train Loss: 28.721084, Hiding PSNR: 23.03, Recovery PSNR: 18.24, Rec SSIM: 0.4046, ACC: 0.6128, BPP: 24.00, w_hid: 0.2652, w_rec: 0.7348
+  Val Loss: 20.478527, Val Hid PSNR: 24.72, Val Rec PSNR: 22.64, Val Rec SSIM: 0.6093, Val ACC: 0.6837
+Epoch 9/100, Train Loss: 26.930148, Hiding PSNR: 25.66, Recovery PSNR: 23.06, Rec SSIM: 0.6386, ACC: 0.6905, BPP: 24.00, w_hid: 0.2904, w_rec: 0.7096
+  Val Loss: 28.679726, Val Hid PSNR: 24.48, Val Rec PSNR: 21.31, Val Rec SSIM: 0.5788, Val ACC: 0.6836
+Epoch 10/100, Train Loss: 28.553691, Hiding PSNR: 24.03, Recovery PSNR: 20.10, Rec SSIM: 0.5905, ACC: 0.6782, BPP: 24.00, w_hid: 0.2315, w_rec: 0.7685
+  Val Loss: 22.902068, Val Hid PSNR: 24.68, Val Rec PSNR: 22.07, Val Rec SSIM: 0.6655, Val ACC: 0.6909
+Epoch 11/100, Train Loss: 24.356699, Hiding PSNR: 26.24, Recovery PSNR: 26.82, Rec SSIM: 0.7672, ACC: 0.7252, BPP: 24.00, w_hid: 0.4250, w_rec: 0.5750
+  Val Loss: 18.646911, Val Hid PSNR: 25.36, Val Rec PSNR: 23.56, Val Rec SSIM: 0.6567, Val ACC: 0.6856
+Epoch 12/100, Train Loss: 20.992062, Hiding PSNR: 25.45, Recovery PSNR: 23.72, Rec SSIM: 0.7552, ACC: 0.7213, BPP: 24.00, w_hid: 0.4382, w_rec: 0.5618
+  Val Loss: 19.277152, Val Hid PSNR: 25.49, Val Rec PSNR: 23.01, Val Rec SSIM: 0.6912, Val ACC: 0.7240
+Epoch 13/100, Train Loss: 18.238136, Hiding PSNR: 24.33, Recovery PSNR: 22.04, Rec SSIM: 0.6921, ACC: 0.6844, BPP: 24.00, w_hid: 0.4129, w_rec: 0.5871
+  Val Loss: 20.676338, Val Hid PSNR: 25.35, Val Rec PSNR: 22.80, Val Rec SSIM: 0.6777, Val ACC: 0.6813
+Epoch 14/100, Train Loss: 17.702909, Hiding PSNR: 27.05, Recovery PSNR: 24.12, Rec SSIM: 0.7656, ACC: 0.6033, BPP: 24.00, w_hid: 0.2897, w_rec: 0.7103
+  Val Loss: 15.379342, Val Hid PSNR: 26.09, Val Rec PSNR: 24.03, Val Rec SSIM: 0.7566, Val ACC: 0.6866
+Epoch 15/100, Train Loss: 17.141966, Hiding PSNR: 27.24, Recovery PSNR: 25.55, Rec SSIM: 0.5884, ACC: 0.7115, BPP: 24.00, w_hid: 0.3835, w_rec: 0.6165
+  Val Loss: 16.573325, Val Hid PSNR: 26.86, Val Rec PSNR: 23.45, Val Rec SSIM: 0.6264, Val ACC: 0.6577
+Epoch 16/100, Train Loss: 14.242115, Hiding PSNR: 26.77, Recovery PSNR: 23.92, Rec SSIM: 0.7421, ACC: 0.6743, BPP: 24.00, w_hid: 0.4030, w_rec: 0.5970
+  Val Loss: 16.352879, Val Hid PSNR: 26.63, Val Rec PSNR: 23.97, Val Rec SSIM: 0.6386, Val ACC: 0.6658
+Epoch 17/100, Train Loss: 14.442046, Hiding PSNR: 26.70, Recovery PSNR: 24.85, Rec SSIM: 0.6500, ACC: 0.7254, BPP: 24.00, w_hid: 0.2845, w_rec: 0.7155
+  Val Loss: 15.468982, Val Hid PSNR: 26.63, Val Rec PSNR: 24.05, Val Rec SSIM: 0.6216, Val ACC: 0.6632
+Epoch 18/100, Train Loss: 15.409617, Hiding PSNR: 27.77, Recovery PSNR: 26.66, Rec SSIM: 0.8312, ACC: 0.7170, BPP: 24.00, w_hid: 0.3640, w_rec: 0.6360
+  Val Loss: 14.331008, Val Hid PSNR: 27.19, Val Rec PSNR: 24.90, Val Rec SSIM: 0.7518, Val ACC: 0.6990
+Epoch 19/100, Train Loss: 13.016259, Hiding PSNR: 27.74, Recovery PSNR: 26.65, Rec SSIM: 0.7072, ACC: 0.6657, BPP: 24.00, w_hid: 0.4325, w_rec: 0.5675
+  Val Loss: 13.629668, Val Hid PSNR: 27.02, Val Rec PSNR: 24.60, Val Rec SSIM: 0.6808, Val ACC: 0.6792
+Epoch 20/100, Train Loss: 12.240857, Hiding PSNR: 25.52, Recovery PSNR: 21.65, Rec SSIM: 0.6418, ACC: 0.6430, BPP: 24.00, w_hid: 0.3970, w_rec: 0.6030
+  Val Loss: 14.582313, Val Hid PSNR: 27.15, Val Rec PSNR: 23.94, Val Rec SSIM: 0.5820, Val ACC: 0.6632
+Epoch 21/100, Train Loss: 11.884836, Hiding PSNR: 28.50, Recovery PSNR: 25.26, Rec SSIM: 0.8290, ACC: 0.7035, BPP: 24.00, w_hid: 0.2436, w_rec: 0.7564
+  Val Loss: 16.384765, Val Hid PSNR: 27.43, Val Rec PSNR: 24.01, Val Rec SSIM: 0.7703, Val ACC: 0.6950
+Epoch 22/100, Train Loss: 12.779315, Hiding PSNR: 28.03, Recovery PSNR: 25.43, Rec SSIM: 0.7075, ACC: 0.6824, BPP: 24.00, w_hid: 0.1608, w_rec: 0.8392
+  Val Loss: 10.307024, Val Hid PSNR: 28.48, Val Rec PSNR: 25.60, Val Rec SSIM: 0.7476, Val ACC: 0.6959
+Epoch 23/100, Train Loss: 10.680629, Hiding PSNR: 27.82, Recovery PSNR: 27.53, Rec SSIM: 0.8453, ACC: 0.7875, BPP: 24.00, w_hid: 0.4513, w_rec: 0.5487
+  Val Loss: 11.329356, Val Hid PSNR: 27.71, Val Rec PSNR: 25.49, Val Rec SSIM: 0.7926, Val ACC: 0.7174
+Epoch 24/100, Train Loss: 11.480560, Hiding PSNR: 27.61, Recovery PSNR: 25.57, Rec SSIM: 0.7329, ACC: 0.6482, BPP: 24.00, w_hid: 0.3820, w_rec: 0.6180
+  Val Loss: 10.588927, Val Hid PSNR: 27.86, Val Rec PSNR: 25.55, Val Rec SSIM: 0.7358, Val ACC: 0.6795
+Epoch 25/100, Train Loss: 10.499164, Hiding PSNR: 27.54, Recovery PSNR: 21.02, Rec SSIM: 0.8456, ACC: 0.6257, BPP: 24.00, w_hid: 0.3261, w_rec: 0.6739
+  Val Loss: 11.095797, Val Hid PSNR: 28.07, Val Rec PSNR: 25.42, Val Rec SSIM: 0.7429, Val ACC: 0.6946
+Epoch 26/100, Train Loss: 9.180080, Hiding PSNR: 29.46, Recovery PSNR: 27.65, Rec SSIM: 0.8563, ACC: 0.7291, BPP: 24.00, w_hid: 0.3655, w_rec: 0.6345
+  Val Loss: 8.571181, Val Hid PSNR: 28.07, Val Rec PSNR: 26.45, Val Rec SSIM: 0.8222, Val ACC: 0.7460
+Epoch 27/100, Train Loss: 9.629083, Hiding PSNR: 30.74, Recovery PSNR: 27.66, Rec SSIM: 0.8207, ACC: 0.6651, BPP: 24.00, w_hid: 0.3266, w_rec: 0.6734
+  Val Loss: 11.500120, Val Hid PSNR: 28.79, Val Rec PSNR: 25.54, Val Rec SSIM: 0.7317, Val ACC: 0.6900
+Epoch 28/100, Train Loss: 10.496454, Hiding PSNR: 28.56, Recovery PSNR: 25.68, Rec SSIM: 0.7424, ACC: 0.6857, BPP: 24.00, w_hid: 0.3734, w_rec: 0.6266
+  Val Loss: 8.741970, Val Hid PSNR: 28.49, Val Rec PSNR: 26.17, Val Rec SSIM: 0.7564, Val ACC: 0.7024
+Epoch 29/100, Train Loss: 8.579089, Hiding PSNR: 29.12, Recovery PSNR: 27.93, Rec SSIM: 0.7752, ACC: 0.7636, BPP: 24.00, w_hid: 0.4238, w_rec: 0.5762
+  Val Loss: 12.084267, Val Hid PSNR: 28.08, Val Rec PSNR: 25.74, Val Rec SSIM: 0.7722, Val ACC: 0.7102
+Epoch 30/100, Train Loss: 9.014849, Hiding PSNR: 27.53, Recovery PSNR: 25.39, Rec SSIM: 0.7226, ACC: 0.6662, BPP: 24.00, w_hid: 0.3584, w_rec: 0.6416
+  Val Loss: 9.140602, Val Hid PSNR: 28.65, Val Rec PSNR: 26.41, Val Rec SSIM: 0.7140, Val ACC: 0.6738
+Epoch 31/100, Train Loss: 8.091826, Hiding PSNR: 29.25, Recovery PSNR: 28.78, Rec SSIM: 0.7521, ACC: 0.7346, BPP: 24.00, w_hid: 0.3830, w_rec: 0.6170
+  Val Loss: 10.253529, Val Hid PSNR: 28.95, Val Rec PSNR: 27.01, Val Rec SSIM: 0.7866, Val ACC: 0.7212
+Epoch 32/100, Train Loss: 8.679306, Hiding PSNR: 30.48, Recovery PSNR: 29.32, Rec SSIM: 0.7134, ACC: 0.7291, BPP: 24.00, w_hid: 0.2998, w_rec: 0.7002
+  Val Loss: 7.276292, Val Hid PSNR: 29.01, Val Rec PSNR: 27.33, Val Rec SSIM: 0.7079, Val ACC: 0.7039
+Epoch 33/100, Train Loss: 8.608469, Hiding PSNR: 30.96, Recovery PSNR: 26.41, Rec SSIM: 0.6422, ACC: 0.6826, BPP: 24.00, w_hid: 0.2795, w_rec: 0.7205
+  Val Loss: 9.832452, Val Hid PSNR: 30.23, Val Rec PSNR: 26.21, Val Rec SSIM: 0.6813, Val ACC: 0.6712
+Epoch 34/100, Train Loss: 8.716241, Hiding PSNR: 29.09, Recovery PSNR: 28.89, Rec SSIM: 0.8745, ACC: 0.7497, BPP: 24.00, w_hid: 0.4257, w_rec: 0.5743
+  Val Loss: 8.086826, Val Hid PSNR: 28.43, Val Rec PSNR: 27.07, Val Rec SSIM: 0.7821, Val ACC: 0.7313
+Epoch 35/100, Train Loss: 8.852785, Hiding PSNR: 30.74, Recovery PSNR: 29.56, Rec SSIM: 0.8552, ACC: 0.7541, BPP: 24.00, w_hid: 0.3673, w_rec: 0.6327
+  Val Loss: 8.200522, Val Hid PSNR: 29.47, Val Rec PSNR: 26.75, Val Rec SSIM: 0.8265, Val ACC: 0.7217
+Epoch 36/100, Train Loss: 7.476049, Hiding PSNR: 29.92, Recovery PSNR: 26.66, Rec SSIM: 0.8338, ACC: 0.6628, BPP: 24.00, w_hid: 0.3188, w_rec: 0.6812
+  Val Loss: 9.306026, Val Hid PSNR: 29.17, Val Rec PSNR: 26.18, Val Rec SSIM: 0.7457, Val ACC: 0.6925
+Epoch 37/100, Train Loss: 7.230858, Hiding PSNR: 28.82, Recovery PSNR: 23.02, Rec SSIM: 0.8705, ACC: 0.6514, BPP: 24.00, w_hid: 0.4519, w_rec: 0.5481
+  Val Loss: 6.748100, Val Hid PSNR: 29.85, Val Rec PSNR: 28.17, Val Rec SSIM: 0.7837, Val ACC: 0.7115
+Epoch 38/100, Train Loss: 6.706765, Hiding PSNR: 28.97, Recovery PSNR: 26.74, Rec SSIM: 0.7888, ACC: 0.6948, BPP: 24.00, w_hid: 0.5501, w_rec: 0.4499
+  Val Loss: 10.944471, Val Hid PSNR: 29.13, Val Rec PSNR: 26.46, Val Rec SSIM: 0.8002, Val ACC: 0.7155
+Epoch 39/100, Train Loss: 7.780995, Hiding PSNR: 30.25, Recovery PSNR: 26.39, Rec SSIM: 0.7175, ACC: 0.6683, BPP: 24.00, w_hid: 0.5654, w_rec: 0.4346
+  Val Loss: 9.607158, Val Hid PSNR: 29.51, Val Rec PSNR: 25.97, Val Rec SSIM: 0.7170, Val ACC: 0.6759
+Epoch 40/100, Train Loss: 7.579031, Hiding PSNR: 26.63, Recovery PSNR: 23.21, Rec SSIM: 0.8105, ACC: 0.6350, BPP: 24.00, w_hid: 0.4096, w_rec: 0.5904
+  Val Loss: 8.144148, Val Hid PSNR: 29.66, Val Rec PSNR: 26.34, Val Rec SSIM: 0.8159, Val ACC: 0.7271
+Epoch 41/100, Train Loss: 6.756982, Hiding PSNR: 27.96, Recovery PSNR: 26.58, Rec SSIM: 0.7928, ACC: 0.7061, BPP: 24.00, w_hid: 0.4037, w_rec: 0.5963
+  Val Loss: 9.814920, Val Hid PSNR: 29.28, Val Rec PSNR: 26.64, Val Rec SSIM: 0.8084, Val ACC: 0.7149
+Epoch 42/100, Train Loss: 7.214383, Hiding PSNR: 30.02, Recovery PSNR: 30.59, Rec SSIM: 0.8009, ACC: 0.7439, BPP: 24.00, w_hid: 0.4760, w_rec: 0.5240
+  Val Loss: 6.587177, Val Hid PSNR: 29.88, Val Rec PSNR: 28.42, Val Rec SSIM: 0.8528, Val ACC: 0.7287
+Epoch 43/100, Train Loss: 7.801195, Hiding PSNR: 29.73, Recovery PSNR: 28.21, Rec SSIM: 0.8735, ACC: 0.7188, BPP: 24.00, w_hid: 0.4339, w_rec: 0.5661
+  Val Loss: 6.794062, Val Hid PSNR: 29.82, Val Rec PSNR: 27.34, Val Rec SSIM: 0.8091, Val ACC: 0.6986
+Epoch 44/100, Train Loss: 6.353932, Hiding PSNR: 31.94, Recovery PSNR: 31.37, Rec SSIM: 0.8741, ACC: 0.7648, BPP: 24.00, w_hid: 0.2888, w_rec: 0.7112
+  Val Loss: 6.832514, Val Hid PSNR: 29.99, Val Rec PSNR: 27.96, Val Rec SSIM: 0.8496, Val ACC: 0.7292
+Epoch 45/100, Train Loss: 7.075586, Hiding PSNR: 29.02, Recovery PSNR: 29.50, Rec SSIM: 0.8714, ACC: 0.7484, BPP: 24.00, w_hid: 0.4898, w_rec: 0.5102
+  Val Loss: 7.564694, Val Hid PSNR: 29.05, Val Rec PSNR: 27.41, Val Rec SSIM: 0.8319, Val ACC: 0.7256
+Epoch 46/100, Train Loss: 7.220152, Hiding PSNR: 29.77, Recovery PSNR: 27.24, Rec SSIM: 0.7582, ACC: 0.6945, BPP: 24.00, w_hid: 0.3572, w_rec: 0.6428
+  Val Loss: 5.311618, Val Hid PSNR: 30.63, Val Rec PSNR: 28.98, Val Rec SSIM: 0.7871, Val ACC: 0.7292
+Epoch 47/100, Train Loss: 6.834941, Hiding PSNR: 30.98, Recovery PSNR: 27.82, Rec SSIM: 0.7875, ACC: 0.6882, BPP: 24.00, w_hid: 0.3426, w_rec: 0.6574
+  Val Loss: 6.101554, Val Hid PSNR: 30.99, Val Rec PSNR: 28.33, Val Rec SSIM: 0.7346, Val ACC: 0.7032
+Epoch 48/100, Train Loss: 6.474003, Hiding PSNR: 28.36, Recovery PSNR: 26.98, Rec SSIM: 0.6084, ACC: 0.7124, BPP: 24.00, w_hid: 0.2933, w_rec: 0.7067
+  Val Loss: 7.601707, Val Hid PSNR: 30.41, Val Rec PSNR: 26.81, Val Rec SSIM: 0.6571, Val ACC: 0.6762
+Epoch 49/100, Train Loss: 5.988740, Hiding PSNR: 27.53, Recovery PSNR: 24.53, Rec SSIM: 0.8091, ACC: 0.6809, BPP: 24.00, w_hid: 0.4353, w_rec: 0.5647
+  Val Loss: 6.234399, Val Hid PSNR: 30.45, Val Rec PSNR: 28.94, Val Rec SSIM: 0.7755, Val ACC: 0.7163
+Epoch 50/100, Train Loss: 5.965633, Hiding PSNR: 30.27, Recovery PSNR: 29.73, Rec SSIM: 0.9020, ACC: 0.7531, BPP: 24.00, w_hid: 0.4204, w_rec: 0.5796
+  Val Loss: 6.033329, Val Hid PSNR: 30.31, Val Rec PSNR: 28.05, Val Rec SSIM: 0.7967, Val ACC: 0.7102
+Epoch 51/100, Train Loss: 5.848771, Hiding PSNR: 29.41, Recovery PSNR: 26.22, Rec SSIM: 0.8260, ACC: 0.6369, BPP: 24.00, w_hid: 0.4071, w_rec: 0.5929
+  Val Loss: 4.955179, Val Hid PSNR: 30.83, Val Rec PSNR: 28.77, Val Rec SSIM: 0.7957, Val ACC: 0.7064
+Epoch 52/100, Train Loss: 5.833447, Hiding PSNR: 31.60, Recovery PSNR: 30.53, Rec SSIM: 0.7514, ACC: 0.7081, BPP: 24.00, w_hid: 0.3583, w_rec: 0.6417
+  Val Loss: 8.189391, Val Hid PSNR: 29.10, Val Rec PSNR: 27.28, Val Rec SSIM: 0.7968, Val ACC: 0.7270
+Epoch 53/100, Train Loss: 5.496929, Hiding PSNR: 28.91, Recovery PSNR: 26.58, Rec SSIM: 0.7878, ACC: 0.7159, BPP: 24.00, w_hid: 0.3727, w_rec: 0.6273
+  Val Loss: 6.587266, Val Hid PSNR: 30.64, Val Rec PSNR: 27.64, Val Rec SSIM: 0.8118, Val ACC: 0.6987
+Epoch 54/100, Train Loss: 5.122005, Hiding PSNR: 30.33, Recovery PSNR: 28.03, Rec SSIM: 0.7800, ACC: 0.6831, BPP: 24.00, w_hid: 0.1613, w_rec: 0.8387
+  Val Loss: 10.099235, Val Hid PSNR: 30.73, Val Rec PSNR: 25.80, Val Rec SSIM: 0.7041, Val ACC: 0.6563
+Epoch 55/100, Train Loss: 5.542342, Hiding PSNR: 26.86, Recovery PSNR: 23.31, Rec SSIM: 0.6726, ACC: 0.7198, BPP: 24.00, w_hid: 0.3527, w_rec: 0.6473
+  Val Loss: 6.656736, Val Hid PSNR: 30.81, Val Rec PSNR: 27.72, Val Rec SSIM: 0.8136, Val ACC: 0.7106
+Epoch 56/100, Train Loss: 5.468059, Hiding PSNR: 27.28, Recovery PSNR: 24.13, Rec SSIM: 0.8584, ACC: 0.6941, BPP: 24.00, w_hid: 0.3547, w_rec: 0.6453
+  Val Loss: 5.619591, Val Hid PSNR: 30.53, Val Rec PSNR: 28.68, Val Rec SSIM: 0.8191, Val ACC: 0.7165
+Epoch 57/100, Train Loss: 5.176004, Hiding PSNR: 32.62, Recovery PSNR: 31.49, Rec SSIM: 0.8851, ACC: 0.7497, BPP: 24.00, w_hid: 0.2822, w_rec: 0.7178
+  Val Loss: 7.003754, Val Hid PSNR: 30.29, Val Rec PSNR: 27.80, Val Rec SSIM: 0.8167, Val ACC: 0.7278
+Epoch 58/100, Train Loss: 4.956139, Hiding PSNR: 31.76, Recovery PSNR: 29.55, Rec SSIM: 0.8762, ACC: 0.7365, BPP: 24.00, w_hid: 0.4302, w_rec: 0.5698
+  Val Loss: 5.045209, Val Hid PSNR: 31.23, Val Rec PSNR: 28.98, Val Rec SSIM: 0.8497, Val ACC: 0.7455
+Epoch 59/100, Train Loss: 4.898349, Hiding PSNR: 30.92, Recovery PSNR: 29.10, Rec SSIM: 0.9149, ACC: 0.7492, BPP: 24.00, w_hid: 0.3381, w_rec: 0.6619
+  Val Loss: 5.910719, Val Hid PSNR: 31.16, Val Rec PSNR: 28.43, Val Rec SSIM: 0.8148, Val ACC: 0.7148
+Epoch 60/100, Train Loss: 4.978977, Hiding PSNR: 29.92, Recovery PSNR: 28.13, Rec SSIM: 0.6713, ACC: 0.7145, BPP: 24.00, w_hid: 0.4709, w_rec: 0.5291
+  Val Loss: 5.156977, Val Hid PSNR: 31.58, Val Rec PSNR: 28.74, Val Rec SSIM: 0.7643, Val ACC: 0.7035
+Epoch 61/100, Train Loss: 4.996972, Hiding PSNR: 31.17, Recovery PSNR: 28.66, Rec SSIM: 0.8546, ACC: 0.6810, BPP: 24.00, w_hid: 0.3651, w_rec: 0.6349
+  Val Loss: 6.263762, Val Hid PSNR: 30.29, Val Rec PSNR: 27.99, Val Rec SSIM: 0.8561, Val ACC: 0.7177
+Epoch 62/100, Train Loss: 4.544789, Hiding PSNR: 33.10, Recovery PSNR: 30.78, Rec SSIM: 0.8587, ACC: 0.7733, BPP: 24.00, w_hid: 0.3986, w_rec: 0.6014
+  Val Loss: 6.125939, Val Hid PSNR: 30.79, Val Rec PSNR: 28.07, Val Rec SSIM: 0.8015, Val ACC: 0.7082
+Epoch 63/100, Train Loss: 4.755864, Hiding PSNR: 28.11, Recovery PSNR: 24.95, Rec SSIM: 0.8027, ACC: 0.6771, BPP: 24.00, w_hid: 0.3862, w_rec: 0.6138
+  Val Loss: 5.089983, Val Hid PSNR: 31.49, Val Rec PSNR: 28.79, Val Rec SSIM: 0.7658, Val ACC: 0.7153
+Epoch 64/100, Train Loss: 4.824945, Hiding PSNR: 30.92, Recovery PSNR: 28.32, Rec SSIM: 0.7165, ACC: 0.7122, BPP: 24.00, w_hid: 0.3617, w_rec: 0.6383
+  Val Loss: 6.109862, Val Hid PSNR: 31.00, Val Rec PSNR: 28.71, Val Rec SSIM: 0.8350, Val ACC: 0.7378
+Epoch 65/100, Train Loss: 4.653681, Hiding PSNR: 30.99, Recovery PSNR: 28.66, Rec SSIM: 0.8287, ACC: 0.7355, BPP: 24.00, w_hid: 0.3917, w_rec: 0.6083
+  Val Loss: 5.074504, Val Hid PSNR: 31.62, Val Rec PSNR: 29.34, Val Rec SSIM: 0.8136, Val ACC: 0.7212
+Epoch 66/100, Train Loss: 4.752016, Hiding PSNR: 32.78, Recovery PSNR: 31.67, Rec SSIM: 0.9026, ACC: 0.6925, BPP: 24.00, w_hid: 0.4161, w_rec: 0.5839
+  Val Loss: 6.408500, Val Hid PSNR: 31.39, Val Rec PSNR: 29.06, Val Rec SSIM: 0.8359, Val ACC: 0.7204
+Epoch 67/100, Train Loss: 4.405754, Hiding PSNR: 30.67, Recovery PSNR: 28.40, Rec SSIM: 0.8928, ACC: 0.7063, BPP: 24.00, w_hid: 0.3868, w_rec: 0.6132
+  Val Loss: 4.506260, Val Hid PSNR: 31.36, Val Rec PSNR: 30.25, Val Rec SSIM: 0.8533, Val ACC: 0.7690
+Epoch 68/100, Train Loss: 4.545190, Hiding PSNR: 31.33, Recovery PSNR: 31.26, Rec SSIM: 0.7248, ACC: 0.8203, BPP: 24.00, w_hid: 0.4040, w_rec: 0.5960
+  Val Loss: 4.798942, Val Hid PSNR: 31.11, Val Rec PSNR: 29.20, Val Rec SSIM: 0.8167, Val ACC: 0.7197
+Epoch 69/100, Train Loss: 4.528962, Hiding PSNR: 27.27, Recovery PSNR: 23.92, Rec SSIM: 0.7059, ACC: 0.6954, BPP: 24.00, w_hid: 0.3846, w_rec: 0.6154
+  Val Loss: 4.679286, Val Hid PSNR: 30.97, Val Rec PSNR: 29.36, Val Rec SSIM: 0.8290, Val ACC: 0.7606
+Epoch 70/100, Train Loss: 4.652832, Hiding PSNR: 31.93, Recovery PSNR: 29.01, Rec SSIM: 0.7540, ACC: 0.7151, BPP: 24.00, w_hid: 0.3093, w_rec: 0.6907
+  Val Loss: 5.201349, Val Hid PSNR: 31.48, Val Rec PSNR: 28.75, Val Rec SSIM: 0.7739, Val ACC: 0.7143
+Epoch 71/100, Train Loss: 4.277081, Hiding PSNR: 30.94, Recovery PSNR: 27.69, Rec SSIM: 0.8891, ACC: 0.8213, BPP: 24.00, w_hid: 0.4500, w_rec: 0.5500
+  Val Loss: 4.687080, Val Hid PSNR: 31.88, Val Rec PSNR: 29.60, Val Rec SSIM: 0.8593, Val ACC: 0.7412
+Epoch 72/100, Train Loss: 4.455486, Hiding PSNR: 31.17, Recovery PSNR: 28.82, Rec SSIM: 0.8904, ACC: 0.7031, BPP: 24.00, w_hid: 0.4064, w_rec: 0.5936
+  Val Loss: 4.929416, Val Hid PSNR: 31.32, Val Rec PSNR: 29.22, Val Rec SSIM: 0.8304, Val ACC: 0.7289
+Epoch 73/100, Train Loss: 4.327190, Hiding PSNR: 33.18, Recovery PSNR: 31.45, Rec SSIM: 0.9140, ACC: 0.7329, BPP: 24.00, w_hid: 0.3583, w_rec: 0.6417
+  Val Loss: 5.122477, Val Hid PSNR: 31.06, Val Rec PSNR: 28.80, Val Rec SSIM: 0.8407, Val ACC: 0.7331
+Epoch 74/100, Train Loss: 4.069171, Hiding PSNR: 32.57, Recovery PSNR: 30.39, Rec SSIM: 0.8635, ACC: 0.7743, BPP: 24.00, w_hid: 0.3426, w_rec: 0.6574
+  Val Loss: 4.334041, Val Hid PSNR: 31.86, Val Rec PSNR: 29.70, Val Rec SSIM: 0.8468, Val ACC: 0.7408
+Epoch 75/100, Train Loss: 4.133947, Hiding PSNR: 27.33, Recovery PSNR: 24.01, Rec SSIM: 0.8463, ACC: 0.7117, BPP: 24.00, w_hid: 0.4560, w_rec: 0.5440
+  Val Loss: 4.624727, Val Hid PSNR: 31.49, Val Rec PSNR: 29.34, Val Rec SSIM: 0.8684, Val ACC: 0.7275
+Epoch 76/100, Train Loss: 4.454041, Hiding PSNR: 31.02, Recovery PSNR: 32.00, Rec SSIM: 0.7312, ACC: 0.7828, BPP: 24.00, w_hid: 0.3611, w_rec: 0.6389
+  Val Loss: 5.010728, Val Hid PSNR: 31.42, Val Rec PSNR: 29.00, Val Rec SSIM: 0.8241, Val ACC: 0.7230
+Epoch 77/100, Train Loss: 4.415300, Hiding PSNR: 29.45, Recovery PSNR: 26.63, Rec SSIM: 0.8210, ACC: 0.7303, BPP: 24.00, w_hid: 0.3557, w_rec: 0.6443
+  Val Loss: 4.243164, Val Hid PSNR: 31.49, Val Rec PSNR: 29.42, Val Rec SSIM: 0.8581, Val ACC: 0.7282
+Epoch 78/100, Train Loss: 3.908985, Hiding PSNR: 29.93, Recovery PSNR: 27.36, Rec SSIM: 0.8602, ACC: 0.7337, BPP: 24.00, w_hid: 0.5392, w_rec: 0.4608
+  Val Loss: 4.444387, Val Hid PSNR: 31.73, Val Rec PSNR: 29.73, Val Rec SSIM: 0.8673, Val ACC: 0.7453
+Epoch 79/100, Train Loss: 4.077176, Hiding PSNR: 30.54, Recovery PSNR: 28.01, Rec SSIM: 0.7980, ACC: 0.7311, BPP: 24.00, w_hid: 0.3933, w_rec: 0.6067
+  Val Loss: 5.155484, Val Hid PSNR: 32.01, Val Rec PSNR: 29.70, Val Rec SSIM: 0.8424, Val ACC: 0.7341
+Epoch 80/100, Train Loss: 4.186688, Hiding PSNR: 32.96, Recovery PSNR: 31.24, Rec SSIM: 0.8596, ACC: 0.7436, BPP: 24.00, w_hid: 0.3712, w_rec: 0.6288
+  Val Loss: 5.238156, Val Hid PSNR: 31.14, Val Rec PSNR: 28.78, Val Rec SSIM: 0.7986, Val ACC: 0.7259
+Epoch 81/100, Train Loss: 3.647747, Hiding PSNR: 34.38, Recovery PSNR: 31.22, Rec SSIM: 0.8711, ACC: 0.7576, BPP: 24.00, w_hid: 0.4310, w_rec: 0.5690
+  Val Loss: 4.060903, Val Hid PSNR: 32.50, Val Rec PSNR: 30.33, Val Rec SSIM: 0.8513, Val ACC: 0.7334
+Epoch 82/100, Train Loss: 3.979362, Hiding PSNR: 31.70, Recovery PSNR: 30.08, Rec SSIM: 0.8859, ACC: 0.7015, BPP: 24.00, w_hid: 0.4386, w_rec: 0.5614
+  Val Loss: 5.360015, Val Hid PSNR: 31.69, Val Rec PSNR: 29.27, Val Rec SSIM: 0.8387, Val ACC: 0.7208
+Epoch 83/100, Train Loss: 3.793051, Hiding PSNR: 32.10, Recovery PSNR: 33.27, Rec SSIM: 0.9405, ACC: 0.7914, BPP: 24.00, w_hid: 0.3818, w_rec: 0.6182
+  Val Loss: 4.036675, Val Hid PSNR: 32.30, Val Rec PSNR: 30.10, Val Rec SSIM: 0.8665, Val ACC: 0.7412
+Epoch 84/100, Train Loss: 3.924289, Hiding PSNR: 31.90, Recovery PSNR: 29.89, Rec SSIM: 0.8341, ACC: 0.7319, BPP: 24.00, w_hid: 0.4580, w_rec: 0.5420
+  Val Loss: 4.203118, Val Hid PSNR: 32.11, Val Rec PSNR: 29.88, Val Rec SSIM: 0.8464, Val ACC: 0.7169
+Epoch 85/100, Train Loss: 3.807973, Hiding PSNR: 32.44, Recovery PSNR: 32.01, Rec SSIM: 0.9180, ACC: 0.8136, BPP: 24.00, w_hid: 0.3638, w_rec: 0.6362
+  Val Loss: 4.281212, Val Hid PSNR: 31.51, Val Rec PSNR: 29.53, Val Rec SSIM: 0.8678, Val ACC: 0.7494
+Epoch 86/100, Train Loss: 3.504475, Hiding PSNR: 30.02, Recovery PSNR: 27.56, Rec SSIM: 0.8445, ACC: 0.7404, BPP: 24.00, w_hid: 0.4564, w_rec: 0.5436
+  Val Loss: 4.049715, Val Hid PSNR: 32.27, Val Rec PSNR: 29.87, Val Rec SSIM: 0.8288, Val ACC: 0.7203
+Epoch 87/100, Train Loss: 3.574022, Hiding PSNR: 30.89, Recovery PSNR: 28.39, Rec SSIM: 0.8968, ACC: 0.7215, BPP: 24.00, w_hid: 0.3744, w_rec: 0.6256
+  Val Loss: 5.868038, Val Hid PSNR: 31.60, Val Rec PSNR: 28.84, Val Rec SSIM: 0.8265, Val ACC: 0.7227
+Epoch 88/100, Train Loss: 4.118015, Hiding PSNR: 32.62, Recovery PSNR: 34.47, Rec SSIM: 0.9425, ACC: 0.7983, BPP: 24.00, w_hid: 0.3913, w_rec: 0.6087
+  Val Loss: 3.948563, Val Hid PSNR: 32.05, Val Rec PSNR: 30.10, Val Rec SSIM: 0.8609, Val ACC: 0.7326
+Epoch 89/100, Train Loss: 3.351876, Hiding PSNR: 31.48, Recovery PSNR: 30.92, Rec SSIM: 0.8756, ACC: 0.7980, BPP: 24.00, w_hid: 0.3542, w_rec: 0.6458
+  Val Loss: 3.970886, Val Hid PSNR: 32.27, Val Rec PSNR: 30.20, Val Rec SSIM: 0.8587, Val ACC: 0.7377
+Epoch 90/100, Train Loss: 3.840867, Hiding PSNR: 30.90, Recovery PSNR: 28.02, Rec SSIM: 0.8553, ACC: 0.6813, BPP: 24.00, w_hid: 0.4075, w_rec: 0.5925
+  Val Loss: 3.701524, Val Hid PSNR: 32.42, Val Rec PSNR: 30.26, Val Rec SSIM: 0.8538, Val ACC: 0.7308
+Epoch 91/100, Train Loss: 4.090047, Hiding PSNR: 31.57, Recovery PSNR: 29.13, Rec SSIM: 0.8902, ACC: 0.7447, BPP: 24.00, w_hid: 0.5472, w_rec: 0.4528
+  Val Loss: 4.842941, Val Hid PSNR: 31.29, Val Rec PSNR: 29.16, Val Rec SSIM: 0.8349, Val ACC: 0.7407
+Epoch 92/100, Train Loss: 3.561113, Hiding PSNR: 31.24, Recovery PSNR: 29.79, Rec SSIM: 0.8575, ACC: 0.7359, BPP: 24.00, w_hid: 0.4537, w_rec: 0.5463
+  Val Loss: 4.040993, Val Hid PSNR: 32.02, Val Rec PSNR: 30.12, Val Rec SSIM: 0.8560, Val ACC: 0.7499
+Epoch 93/100, Train Loss: 3.924771, Hiding PSNR: 33.77, Recovery PSNR: 31.67, Rec SSIM: 0.9176, ACC: 0.7587, BPP: 24.00, w_hid: 0.3285, w_rec: 0.6715
+  Val Loss: 3.576225, Val Hid PSNR: 32.44, Val Rec PSNR: 30.43, Val Rec SSIM: 0.8484, Val ACC: 0.7496
+Epoch 94/100, Train Loss: 3.969402, Hiding PSNR: 31.21, Recovery PSNR: 29.10, Rec SSIM: 0.8499, ACC: 0.7546, BPP: 24.00, w_hid: 0.4788, w_rec: 0.5212
+  Val Loss: 4.983636, Val Hid PSNR: 31.49, Val Rec PSNR: 29.40, Val Rec SSIM: 0.8453, Val ACC: 0.7259
+Epoch 95/100, Train Loss: 3.696561, Hiding PSNR: 31.26, Recovery PSNR: 30.75, Rec SSIM: 0.8422, ACC: 0.7454, BPP: 24.00, w_hid: 0.3775, w_rec: 0.6225
+  Val Loss: 5.732154, Val Hid PSNR: 31.80, Val Rec PSNR: 29.05, Val Rec SSIM: 0.8570, Val ACC: 0.7421
+Epoch 96/100, Train Loss: 3.790642, Hiding PSNR: 27.96, Recovery PSNR: 25.66, Rec SSIM: 0.8835, ACC: 0.7027, BPP: 24.00, w_hid: 0.3453, w_rec: 0.6547
+  Val Loss: 4.005093, Val Hid PSNR: 32.30, Val Rec PSNR: 30.44, Val Rec SSIM: 0.8386, Val ACC: 0.7441
+Epoch 97/100, Train Loss: 3.592463, Hiding PSNR: 32.77, Recovery PSNR: 30.20, Rec SSIM: 0.8583, ACC: 0.7423, BPP: 24.00, w_hid: 0.2542, w_rec: 0.7458
+  Val Loss: 5.370399, Val Hid PSNR: 31.48, Val Rec PSNR: 29.39, Val Rec SSIM: 0.8560, Val ACC: 0.7295
+Epoch 98/100, Train Loss: 3.862564, Hiding PSNR: 30.62, Recovery PSNR: 28.66, Rec SSIM: 0.7561, ACC: 0.7311, BPP: 24.00, w_hid: 0.3577, w_rec: 0.6423
+  Val Loss: 4.460029, Val Hid PSNR: 31.72, Val Rec PSNR: 29.64, Val Rec SSIM: 0.8532, Val ACC: 0.7356
+Epoch 99/100, Train Loss: 3.820986, Hiding PSNR: 28.88, Recovery PSNR: 25.87, Rec SSIM: 0.8061, ACC: 0.6628, BPP: 24.00, w_hid: 0.4091, w_rec: 0.5909
+  Val Loss: 4.062669, Val Hid PSNR: 32.21, Val Rec PSNR: 30.12, Val Rec SSIM: 0.8391, Val ACC: 0.7437
+Epoch 100/100, Train Loss: 3.375778, Hiding PSNR: 34.83, Recovery PSNR: 33.34, Rec SSIM: 0.8761, ACC: 0.7359, BPP: 24.00, w_hid: 0.3783, w_rec: 0.6217
+  Val Loss: 4.597298, Val Hid PSNR: 32.04, Val Rec PSNR: 30.01, Val Rec SSIM: 0.8541, Val ACC: 0.7433
