@@ -1,0 +1,70 @@
+/home/kar/Gem/ilwt_150epoch/ilwt_main.py:1179: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=False)
+ILWT Steganography Training and Testing
+==================================================
+Loaded 100 images
+Dataset split:
+  Total: 100
+  Train: 70 (70.0%)
+  Val:   15 (15.0%)
+  Test:  15 (15.0%)
+
+Training ILWT Steganography Model (with enhanced metrics and validation)...
+Using device: cuda
+Model parameters: 624,503
+SAFE GPU optimizations: batch_size=1, num_workers=4, pin_memory=True, AMP=False
+/home/kar/Gem/ilwt_150epoch/ilwt_main.py:1232: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+    [Batch 0 Gradients] log_wLL: 0.0000382, log_kY: -0.0002038, log_kC: -0.0016527
+/home/kar/Gem/ilwt_150epoch/ilwt_main.py:1301: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+/home/kar/Gem/ilwt_150epoch/ilwt_main.py:1353: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), torch.cuda.amp.autocast(enabled=use_amp):
+Epoch 1/10, Train Loss: 331.448234, Hiding PSNR: 28.21, Recovery PSNR: 14.73, Rec SSIM: 0.2363, ACC: 0.5709, w_hid: 0.0267, w_rec: 0.9733
+  Learnable Weights: LL=0.2783, LH=0.2697, HL=0.2700, HH=0.1165, LL2=0.2231
+  YCbCr Scaling: kY=0.0245, kC=0.1342
+  Val Loss: 248.700795, Val Hid PSNR: 28.14, Val Rec PSNR: 12.82, Val Rec SSIM: 0.2598, Val ACC: 0.5473
+  *** New best model saved! Recovery PSNR: 14.73 dB ***
+Epoch 2/10, Train Loss: 135.228822, Hiding PSNR: 23.14, Recovery PSNR: 17.94, Rec SSIM: 0.3716, ACC: 0.6291, w_hid: 0.2301, w_rec: 0.7699
+  Learnable Weights: LL=0.3083, LH=0.3900, HL=0.3968, HH=0.1985, LL2=0.3127
+  YCbCr Scaling: kY=0.0272, kC=0.2236
+  Val Loss: 69.742787, Val Hid PSNR: 23.74, Val Rec PSNR: 17.32, Val Rec SSIM: 0.3379, Val ACC: 0.6129
+  *** New best model saved! Recovery PSNR: 17.94 dB ***
+Epoch 3/10, Train Loss: 69.349132, Hiding PSNR: 22.39, Recovery PSNR: 19.58, Rec SSIM: 0.3601, ACC: 0.6161, w_hid: 0.3148, w_rec: 0.6852
+  Learnable Weights: LL=0.3146, LH=0.4284, HL=0.4326, HH=0.2859, LL2=0.3274
+  YCbCr Scaling: kY=0.0377, kC=0.2845
+  Val Loss: 91.175594, Val Hid PSNR: 21.62, Val Rec PSNR: 16.96, Val Rec SSIM: 0.3337, Val ACC: 0.5919
+  *** New best model saved! Recovery PSNR: 19.58 dB ***
+Epoch 4/10, Train Loss: 58.219466, Hiding PSNR: 23.42, Recovery PSNR: 22.10, Rec SSIM: 0.5820, ACC: 0.6819, w_hid: 0.3385, w_rec: 0.6615
+  Learnable Weights: LL=0.2945, LH=0.3958, HL=0.4018, HH=0.3435, LL2=0.3002
+  YCbCr Scaling: kY=0.0651, kC=0.2810
+  Val Loss: 71.758957, Val Hid PSNR: 22.53, Val Rec PSNR: 18.39, Val Rec SSIM: 0.4625, Val ACC: 0.6459
+  *** New best model saved! Recovery PSNR: 22.10 dB ***
+Epoch 5/10, Train Loss: 53.896214, Hiding PSNR: 23.21, Recovery PSNR: 21.70, Rec SSIM: 0.5401, ACC: 0.6706, w_hid: 0.3155, w_rec: 0.6845
+  Learnable Weights: LL=0.2917, LH=0.3839, HL=0.3974, HH=0.3742, LL2=0.3015
+  YCbCr Scaling: kY=0.0909, kC=0.2806
+  Val Loss: 54.528790, Val Hid PSNR: 22.51, Val Rec PSNR: 18.34, Val Rec SSIM: 0.4909, Val ACC: 0.6300
+Traceback (most recent call last):
+  File "/home/kar/Gem/ilwt_150epoch/ilwt_main.py", line 1980, in <module>
+    main()
+    ~~~~^^
+  File "/home/kar/Gem/ilwt_150epoch/ilwt_main.py", line 1763, in main
+    model, metrics_history = train_model(model, train_dataset, val_dataset, num_epochs=num_epochs)
+                             ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kar/Gem/ilwt_150epoch/ilwt_main.py", line 1493, in train_model
+    save_checkpoint(
+    ~~~~~~~~~~~~~~~^
+        model, optimizer, scheduler, epoch + 1,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        metrics_history, train_model.best_recovery_psnr
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/kar/Gem/ilwt_150epoch/ilwt_main.py", line 925, in save_checkpoint
+    'hidden_channels': model.blocks[0].coupling1.net[0].out_channels if hasattr(model.blocks[0].coupling1.net[0], 'out_channels') else 128
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kar/Implimentation/Project1/ILL/steg_env/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1940, in __getattr__
+    raise AttributeError(
+        f"'{type(self).__name__}' object has no attribute '{name}'"
+    )
+AttributeError: 'StarINNBlock' object has no attribute 'coupling1'
